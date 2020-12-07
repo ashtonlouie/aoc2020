@@ -20,7 +20,7 @@ if __name__ == "__main__":
             continue
 
         for b in inside.split(', '):
-            num, adj, color, i = b.split(' ')
+            num, adj, color = b.split(' ')[:-1]
             contents[f"{adj} {color}"] = int(num)
 
         all_bags[bag] = contents
