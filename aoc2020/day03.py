@@ -3,7 +3,7 @@ from collections import Counter, namedtuple
 if __name__ == "__main__":
 
     Data = namedtuple('Data', ['low', 'high', 'char', 'pw'])
-    with open('data/input3.txt') as f:
+    with open('data/input03.txt') as f:
         input = f.read().splitlines()
 
     ## part 1

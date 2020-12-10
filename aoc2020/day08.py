@@ -6,7 +6,7 @@ import re
 if __name__ == "__main__":
 
 
-    with open('data/input8.txt') as f:
+    with open('data/input08.txt') as f:
         data = f.read().splitlines()
 
     # part 1

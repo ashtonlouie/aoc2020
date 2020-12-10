@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     all_bags = dict()
 
-    with open('data/input7.txt') as f:
+    with open('data/input07.txt') as f:
         data = f.read().splitlines()
 
     for d in data:

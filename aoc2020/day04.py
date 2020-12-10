@@ -9,7 +9,7 @@ if __name__ == "__main__":
     valid = 0
     required = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'}
 
-    with open('data/input4.txt') as f:
+    with open('data/input04.txt') as f:
         data = f.read().splitlines()
 
     # part 1
