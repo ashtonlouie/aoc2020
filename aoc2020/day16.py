@@ -54,6 +54,7 @@ if __name__ == "__main__":
     rule_names = [x.split(':')[0] for x in fields[0]]
     rules = dict(zip(rule_names, rule_ranges))
 
+    # iterate column by column. each column could be one of many fields. find which fields are possibilities for each position
     possibilities = dict()
     for i in range(len(real_tickets[0])):
         candidates = rules.copy()
@@ -69,6 +70,10 @@ if __name__ == "__main__":
                 del candidates[name]
         possibilities[i] = set(candidates.keys())
 
+    # there is only one combination of fields such that each position gets a valid field.
+    # this implies one of the positions only have 1 possible field from the previous step.
+    # find that 1 possible field and remove it from all other possibilities, which will
+    # cause another position to only have 1 possible field left. repeat until done
     positions = dict()
     while len(positions) < len(rules):
         for i,names in possibilities.items():
